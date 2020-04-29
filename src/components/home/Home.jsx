@@ -4,12 +4,12 @@ import { withNamespaces } from 'react-i18next';
 import './home.scss';
 
 const HomeComponent = props => {
-  const { t: customText } = props;
+  const { t: customText, state } = props;
 
   const clickHandler = () => {
     alert('Hello Alex!')
   };
-
+  console.log(state)
   return (
     <div className="home-container">
       <h1 className="home-title">HOME Page</h1>
@@ -20,8 +20,8 @@ const HomeComponent = props => {
   );
 };
 
-const mapStateToProps = () => {
-  return {};
+const mapStateToProps = state => {
+  return {state};
 };
 
 const mapDispatchToProps = {
