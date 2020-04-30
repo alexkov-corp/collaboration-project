@@ -22,12 +22,7 @@ const Navigation = props => {
     <div className='navigation-container'>
       <nav className='navigation-block'>
         <ul className='navigation-ul'>
-          <li>
-            <span className='line'></span>
-            <Link to={root}>
-            home
-          </Link>
-          </li>
+          <li ><Link className=' active_line' to={root}>home</Link></li>
           <li><Link to={collections}>collections</Link></li>
           <li><Link to={boutique}>boutique</Link></li>
           <li><Link to={measure}>measure</Link></li>
