@@ -18,14 +18,14 @@ const HeaderComponent = props => {
                 </Link>
             </nav>
             <figure className='logo'>
-                <a>
+                <Link to={'/editrout'}>
                     <img src='../img/logo.png'/>
-                </a>
+                </Link>
             </figure>
             <figure className='social'>
-                <a>
+                <Link to={'/editrout'}>
                     <img src='../img/social.png'/>
-                </a>
+                </Link>
             </figure>
         </header>
     );

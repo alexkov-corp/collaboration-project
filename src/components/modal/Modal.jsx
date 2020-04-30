@@ -1,23 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './modal.scss';
 import ReactModal from 'react-modal';
 import {customStyles} from '../../constants/modalConstants';
 import {connect} from "react-redux";
+import modalReducer from "../../reducers/modal-reducer";
 
 const Modal = props => {
+  const [modalIsOpen,setIsOpen] = useState(false);
   const {children} = props;
 
   const openModal = () => {
-    // setIsOpen(true);
+    setIsOpen(true);
   };
 
   const afterOpenModal = () => {
     // references are now sync'd and can be accessed.
     // subtitle.style.color = '#f00';
+    console.log('after open modal handler');
   };
 
   const closeModal = () => {
-    // setIsOpen(false);
+    setIsOpen(false);
   };
 
   return(
@@ -34,7 +37,10 @@ const Modal = props => {
 };
 
 const mapStateToProps = state => {
-  return {};
+  const {modalReducer} = state;
+  return {
+    modalReducer
+  };
 };
 
 const mapDispatchToProps = {};

@@ -1,6 +1,7 @@
 import React from "react";
 import './footer.scss'
 import {connect} from "react-redux";
+import {Link} from "react-router-dom";
 
 const FooterComponent = props => {
     console.log(props)
@@ -18,16 +19,16 @@ const FooterComponent = props => {
                 </ul>
                 <ul className='nav-language'>
                     <li>
-                        <a >itl</a>
+                        <Link to={'/editrout'}>itl</Link>
                     </li>
                     <li>
-                        <a >eng</a>
+                        <Link to={'/editrout'}>eng</Link>
                     </li>
                     <li>
-                        <a >ua</a>
+                        <Link to={'/editrout'}>ua</Link>
                     </li>
                     <li>
-                        <a >jap</a>
+                        <Link to={'/editrout'}>jap</Link>
                     </li>
                 </ul>
             </div>
