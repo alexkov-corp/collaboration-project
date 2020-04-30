@@ -8,3 +8,9 @@ export const customStyles = {
     transform             : 'translate(-50%, -50%)'
   }
 };
+
+export const INITIAL_STATE = {
+  isShowingModal: false,
+};
+
+export const CHANGE_MODAL_SHOW_STATUS = 'CHANGE_MODAL_SHOW_STATUS';
