@@ -3,8 +3,7 @@ import './footer.scss'
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 
-const FooterComponent = props => {
-    console.log(props)
+const FooterComponent = () => {
     return (
         <footer className="footer-wrapper">
             <span>LUBIAM ® . P.IVA 01221630203</span>
@@ -36,7 +35,7 @@ const FooterComponent = props => {
     );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = () => {
     return {};
 };
 

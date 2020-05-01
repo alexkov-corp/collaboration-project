@@ -39,7 +39,7 @@ const Navigation = props => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = store => {
   return {
   };
 };

@@ -10,7 +10,7 @@ export const customStyles = {
 };
 
 export const INITIAL_STATE = {
-  isShowingModal: false,
+  isModalShow: false,
 };
 
-export const CHANGE_MODAL_SHOW_STATUS = 'CHANGE_MODAL_SHOW_STATUS';
+export const SWITCH_MODAL_SHOW_STATUS = 'SWITCH_MODAL_SHOW_STATUS';

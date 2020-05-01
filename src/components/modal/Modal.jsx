@@ -1,48 +1,46 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './modal.scss';
 import ReactModal from 'react-modal';
-import {customStyles} from '../../constants/modalConstants';
+import {customStyles} from '../../constants/modal-constants';
 import {connect} from "react-redux";
-import modalReducer from "../../reducers/modal-reducer";
+import {switchModalShow} from '../../actions/modal-actions';
+
 
 const Modal = props => {
-  const [modalIsOpen,setIsOpen] = useState(false);
-  const {children} = props;
-
-  const openModal = () => {
-    setIsOpen(true);
-  };
+  const {children, modalReducer, switchModalShow} = props;
 
   const afterOpenModal = () => {
-    // references are now sync'd and can be accessed.
-    // subtitle.style.color = '#f00';
     console.log('after open modal handler');
   };
 
   const closeModal = () => {
-    setIsOpen(false);
+    const closeModalWindow = false;
+    switchModalShow(closeModalWindow);
   };
 
   return(
     <ReactModal
-      isOpen={false}
+      isOpen={modalReducer.isModalShow}
       onAfterOpen={afterOpenModal}
       onRequestClose={closeModal}
       style={customStyles}
+      ariaHideApp={false}
       contentLabel="Menu Modal Window"
     >
-      {children}
+      <div>Hello modal</div>
     </ReactModal>
   )
 };
 
-const mapStateToProps = state => {
-  const {modalReducer} = state;
+const mapStateToProps = store => {
+  const {modalReducer} = store;
   return {
     modalReducer
   };
 };
 
-const mapDispatchToProps = {};
+const mapDispatchToProps = {
+  switchModalShow
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Modal);
