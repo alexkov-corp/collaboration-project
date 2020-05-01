@@ -3,18 +3,17 @@ import './footer.scss'
 import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 
-const FooterComponent = props => {
-    console.log(props)
+const FooterComponent = () => {
     return (
         <footer className="footer-wrapper">
             <span>LUBIAM ® . P.IVA 01221630203</span>
             <div className='footer-nav' >
                 <ul className='nav-switch'>
                     <li>
-                        <a >Privacy</a>
+                        <Link to={'/editrout'}>Privacy</Link>
                     </li>
                     <li>
-                        <a>Web agency</a>
+                        <Link to={'/editrout'}>Web agency</Link>
                     </li>
                 </ul>
                 <ul className='nav-language'>
@@ -36,7 +35,7 @@ const FooterComponent = props => {
     );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = () => {
     return {};
 };
 

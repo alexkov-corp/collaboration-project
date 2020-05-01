@@ -3,6 +3,7 @@ import './App.scss';
 import Routes from './components/routes/Routes'
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
+import Modal from './components/modal/Modal';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <Routes />
       <Footer />
+      <Modal />
     </div>
   );
 }
