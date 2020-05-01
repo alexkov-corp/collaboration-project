@@ -4,10 +4,10 @@ import ReactModal from 'react-modal';
 import {customStyles} from '../../constants/modal-constants';
 import {connect} from "react-redux";
 import {switchModalShow} from '../../actions/modal-actions';
-
+import Navigation from '../navigation/Navigation'
 
 const Modal = props => {
-  const {children, modalReducer, switchModalShow} = props;
+  const {modalReducer, switchModalShow} = props;
 
   const afterOpenModal = () => {
     console.log('after open modal handler');
@@ -27,7 +27,7 @@ const Modal = props => {
       ariaHideApp={false}
       contentLabel="Menu Modal Window"
     >
-      <div>Hello modal</div>
+      <Navigation />
     </ReactModal>
   )
 };

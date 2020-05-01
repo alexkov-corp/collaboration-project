@@ -10,10 +10,10 @@ const FooterComponent = () => {
             <div className='footer-nav' >
                 <ul className='nav-switch'>
                     <li>
-                        <a >Privacy</a>
+                        <Link to={'/editrout'}>Privacy</Link>
                     </li>
                     <li>
-                        <a>Web agency</a>
+                        <Link to={'/editrout'}>Web agency</Link>
                     </li>
                 </ul>
                 <ul className='nav-language'>
