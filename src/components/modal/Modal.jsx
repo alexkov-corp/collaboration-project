@@ -4,10 +4,11 @@ import ReactModal from 'react-modal';
 import {customStyles} from '../../constants/modal-constants';
 import {connect} from "react-redux";
 import {switchModalShow} from '../../actions/modal-actions';
-import Navigation from '../navigation/Navigation'
+import Navigation from '../navigation/Navigation';
+import {isModalShowSelector} from '../../selectors/modal-selectors';
 
 const Modal = props => {
-  const {modalReducer, switchModalShow} = props;
+  const {switchModalShow, isModalShow} = props;
 
   const afterOpenModal = () => {
     console.log('after open modal handler');
@@ -20,7 +21,7 @@ const Modal = props => {
 
   return(
     <ReactModal
-      isOpen={modalReducer.isModalShow}
+      isOpen={isModalShow}
       onAfterOpen={afterOpenModal}
       onRequestClose={closeModal}
       style={customStyles}
@@ -32,10 +33,9 @@ const Modal = props => {
   )
 };
 
-const mapStateToProps = store => {
-  const {modalReducer} = store;
+const mapStateToProps = state => {
   return {
-    modalReducer
+    isModalShow: isModalShowSelector(state),
   };
 };
 

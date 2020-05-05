@@ -48,7 +48,7 @@ const Navigation = props => {
   );
 };
 
-const mapStateToProps = store => {
+const mapStateToProps = state => {
   return {
   };
 };
