@@ -1,0 +1,95 @@
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 45px;
+  background: white;
+  border-bottom: 1px solid #eeeeee;
+  z-index: 3;
+}
+.header-wrapper .react-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: 0.5s;
+}
+.header-wrapper .react-link:hover {
+  background: #eeeeee;
+}
+.header-wrapper .react-link span {
+  width: 30px;
+  height: 1px;
+  background: #a9a9a9;
+  display: block;
+  margin: 5px;
+  transition: 0.5s;
+}
+.header-wrapper .react-link span:nth-child(2) {
+  width: 25px;
+  transform: translateX(-2.5px);
+  transition: 0.5s;
+}
+.header-wrapper .react-link:hover span:nth-child(2) {
+  width: 30px;
+  transform: translateX(0px);
+}
+.header-wrapper .logo {
+  width: 106px;
+  height: 45px;
+  cursor: pointer;
+}
+.header-wrapper .logo img {
+  width: 100%;
+  height: 100%;
+}
+.header-wrapper .social {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.header-wrapper .social:hover {
+  background: #eeeeee;
+}
+
+.site-navigation {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: flex-end;
+}
+.site-navigation .cart-icon-navigation-container {
+  display: flex;
+  flex-direction: row;
+}
+.site-navigation .cart-icon-navigation-container .price-icon-value {
+  font-size: 14px;
+  color: dodgerblue;
+}
+.site-navigation li {
+  flex: 1 1 auto;
+  margin: 0;
+  text-align: center;
+  white-space: nowrap;
+}
+.site-navigation li a {
+  border: 0;
+  display: flex;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+  text-decoration: none;
+}
+.site-navigation li a:hover {
+  color: dodgerblue;
+}
+
+/*# sourceMappingURL=header.css.map */

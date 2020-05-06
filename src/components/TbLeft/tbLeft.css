@@ -1,0 +1,22 @@
+.left-block {
+  width: 45px;
+  height: calc(100vh - 89.2px);
+  background: white;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border-right: 1px solid #eeeeee;
+  z-index: 8888;
+}
+.left-block span {
+  min-width: 200px;
+  display: inline-block;
+  transform: rotate(-90deg) translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: -73px;
+  color: #b1b1b1;
+}
+
+/*# sourceMappingURL=tbLeft.css.map */

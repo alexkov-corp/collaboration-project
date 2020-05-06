@@ -1,0 +1,9 @@
+.component-container {
+  height: calc(100vh - 90px);
+  padding: 45px;
+  min-height: 650px;
+  position: relative;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}

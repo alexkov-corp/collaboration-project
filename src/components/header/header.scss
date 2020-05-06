@@ -1,28 +1,45 @@
 .header-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
   height: 45px;
   background: white;
+  border-bottom: 1px solid #eeeeee;
+  z-index: 3;
+
   .react-link {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
     cursor: pointer;
+    padding: 5px;
+    transition: 0.5s;
+    &:hover{
+      background: #eeeeee;
+    }
 
-    .wrap-menu{
+
       span{
         width: 30px;
         height: 1px;
         background: #a9a9a9;
         display: block;
-        margin: 8px;
+        margin: 5px;
         transition: 0.5s;
-
       }
-
+    span:nth-child(2){
+      width: 25px;
+      transform: translateX(-2.5px);
+      transition: 0.5s;
+    }
+    &:hover span:nth-child(2){
+      width: 30px;
+      transform: translateX(0px);
     }
   }
   .logo{
