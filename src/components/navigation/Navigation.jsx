@@ -25,7 +25,7 @@ const Navigation = props => {
   const selectPageHandler = () => {
     const closeModalWindow = false;
     switchModalShow(closeModalWindow);
-  }
+  };
 
   return (
     <div className='navigation-container'>

@@ -33,7 +33,7 @@ const Routes = () => {
     navigation
   } = routes;
   return (
-      <div className="component-container">
+      <React.Fragment>
         <Suspense fallback={<Preloader />}>
           <Switch>
             <Route exact path={root} component={Home}/>
@@ -51,7 +51,7 @@ const Routes = () => {
             <Route component={PageNotFound}/>
           </Switch>
         </Suspense>
-      </div>
+      </React.Fragment>
   );
 };
 
