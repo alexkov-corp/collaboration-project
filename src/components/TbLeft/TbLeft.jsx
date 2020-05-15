@@ -1,11 +1,21 @@
 import React from "react";
 import './tbLeft.css';
+import {connect} from "react-redux";
 
-const TbLeft = () => {
+const TbLeft = (props) => {
+    const {navigationReducer}=props;
     return (
         <div className='left-block'>
-            <span>High quality care</span>
+            <span>{navigationReducer.title}</span>
         </div>
     )
 };
-export default TbLeft;
+
+const mapStateToProps=(store)=>{
+    const {navigationReducer} = store;
+
+    return {
+        navigationReducer
+    };
+};
+export default connect(mapStateToProps)(TbLeft)

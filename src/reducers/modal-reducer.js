@@ -15,4 +15,4 @@ const modalReducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-export default modalReducer
+export default modalReducer;

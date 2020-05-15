@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   height: 45px;
@@ -11,34 +11,29 @@
   z-index: 3;
 }
 .header-wrapper .react-link {
+  width: 45px;
+  height: 45px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-decoration: none;
   cursor: pointer;
-  padding: 5px;
   transition: 0.5s;
 }
 .header-wrapper .react-link:hover {
   background: #eeeeee;
 }
 .header-wrapper .react-link span {
-  width: 30px;
+  width: 28px;
   height: 1px;
   background: #a9a9a9;
   display: block;
   margin: 5px;
   transition: 0.5s;
 }
-.header-wrapper .react-link span:nth-child(2) {
-  width: 25px;
-  transform: translateX(-2.5px);
-  transition: 0.5s;
-}
-.header-wrapper .react-link:hover span:nth-child(2) {
-  width: 30px;
-  transform: translateX(0px);
+.header-wrapper .react-link:hover span {
+  transform: scale(1.1);
 }
 .header-wrapper .logo {
   width: 106px;
