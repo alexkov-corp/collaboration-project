@@ -4,8 +4,8 @@ import {connect} from "react-redux";
 import {Link} from "react-router-dom";
 import {routes} from "../routes/router-path";
 import {switchModalShow} from '../../actions/modal-actions';
-import {actionNavElementItem} from '../../actions/navigation_action';
-import navigationReducer from "../../reducers/navigation-reducer";
+import {actionNavElementItem} from '../../actions/navigation-action';
+
 
 
 const Navigation = props => {

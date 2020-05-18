@@ -1,6 +1,6 @@
 
 export const INITIAL_STATE = {
-title:'home'
+title:''
 };
 
-export  const  NAVIGATION = 'NAVIGATION';
+export  const SINGLE_PAGE_NAVIGATION = 'SINGLE_PAGE_NAVIGATION';
