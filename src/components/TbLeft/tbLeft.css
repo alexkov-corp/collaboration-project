@@ -9,6 +9,11 @@
   border-right: 1px solid #eeeeee;
   z-index: 8888;
 }
+@media only screen and (max-width: 650px) {
+  .left-block {
+    display: none;
+  }
+}
 .left-block span {
   min-width: 200px;
   display: inline-block;
