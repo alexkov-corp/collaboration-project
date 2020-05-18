@@ -53,11 +53,8 @@ const mapStateToProps = store => {
 };
 
 const mapDispatchToProps = {
-
     actionNavElementItem,
     switchModalShow
-
-
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navigation);
