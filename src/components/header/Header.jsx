@@ -22,7 +22,7 @@ const HeaderComponent = props => {
                 <span/>
             </nav>
             <figure className='logo'>
-                <Link to={'/editrout'}>
+                <Link to={'/'}>
                     <img src='../img/logo.png'/>
                 </Link>
             </figure>
