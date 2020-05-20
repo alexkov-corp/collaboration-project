@@ -1,5 +1,5 @@
-import React from "react";
-import {connect} from "react-redux";
+import React from "react"
+import {connect} from "react-redux"
 import ReactPlayer from 'react-player'
 import {
   BoutiqueContainer,
@@ -11,6 +11,7 @@ import {
   DoubleImageBlock,
   FormWrapper,
 } from "./boutique-styled";
+import BoutiqueForm from './boutique-form/BoutiqueForm'
 
 const Boutique = props => {
   return (
@@ -79,6 +80,7 @@ const Boutique = props => {
       <FormWrapper>
         <h1>Here will be a form</h1>
         <h1>Wait for it...</h1>
+        <BoutiqueForm />
       </FormWrapper>
 
     </BoutiqueContainer>
