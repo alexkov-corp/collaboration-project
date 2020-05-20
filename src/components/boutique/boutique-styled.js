@@ -49,9 +49,21 @@ export const Text = styled.div`
   line-height: 25px;
   font-size: 17px;
   color: ${TEXT_COLOR};
-  border-top: 1px solid rgb(221, 221, 221);
   padding: 25px 0px;
 `;
+
+export const ContactUsBlock = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0px;
+  border-bottom: 1px solid #ddd;
+  & > div {
+    flex: 1;
+    line-height: 23px;
+    padding: 0 50px;
+    text-align: left;
+  }
+`
 
 export const DoubleImageBlock = styled.div`
   display: flex;
@@ -65,7 +77,7 @@ export const DoubleImageBlock = styled.div`
 
 export const FormWrapper = styled.div`
   width: 700px;
-  margin: 50px 0;
+  margin-bottom: 50px;
   display: flex;
   flex-direction: column;
   align-self: center;

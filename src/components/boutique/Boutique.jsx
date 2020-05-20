@@ -10,6 +10,7 @@ import {
   Text,
   DoubleImageBlock,
   FormWrapper,
+  ContactUsBlock,
 } from "./boutique-styled";
 import BoutiqueForm from './boutique-form/BoutiqueForm'
 
@@ -77,9 +78,29 @@ const Boutique = props => {
         <img src="https://www.lubiam.it/public/boutique/05.jpg" alt="img-2"/>
       </DoubleImageBlock>
 
+      <TextBlock>
+        <TextTitle>
+          Contact us
+        </TextTitle>
+        <ContactUsBlock>
+          <div>
+            <strong>Address</strong>
+            <div>Via della Spiga 30 . 20121 Milano</div>
+            <div>
+              <strong>Phone: </strong><span> +39 02 87250355</span>
+            </div>
+            <strong>Email: </strong><span> spiga@lbm1911.it</span>
+          </div>
+          <div>
+            <div>
+              <strong>Opening Hours</strong>
+            </div>
+            <div>Monday to Saturday 10-19</div>
+          </div>
+        </ContactUsBlock>
+      </TextBlock>
+
       <FormWrapper>
-        <h1>Here will be a form</h1>
-        <h1>Wait for it...</h1>
         <BoutiqueForm />
       </FormWrapper>
 
