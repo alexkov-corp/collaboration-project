@@ -63,7 +63,7 @@ export const ContactUsBlock = styled.div`
     padding: 0 50px;
     text-align: left;
   }
-`
+`;
 
 export const DoubleImageBlock = styled.div`
   display: flex;

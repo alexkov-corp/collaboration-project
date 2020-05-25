@@ -1,36 +1,46 @@
 import React from 'react'
 import {
-  FinalFieldContainer,
   Label,
-  FinalInput
+  FinalInput,
+  Error,
+  FinalCheckBox
 } from './final-field-styled'
 
 const FinalField = ({mainProps}) => {
   const {input, meta, placeholder, label} = mainProps;
   const {name, value, onChange, onFocus, onBlur, checked, type} = input;
   const {touched, error, active} = meta;
+  const generateLabel = () => {
+    return label ? <Label>{label}</Label>: null;
+  };
 
-  // implement component types.
   const generateFinalField = () => {
     switch(type){
-      case 'textField':
+      case 'text':
         return <FinalInput
           type="text"
           {...input}
           placeholder={placeholder}
-        />
+        />;
 
-      case 'phoneField':
-        return <input type="text"/>
+      case 'email':
+        return <FinalInput
+          type="email"
+          {...input}
+          placeholder={placeholder}
+        />;
 
-      case 'emailField':
-        return <input type="text"/>
-
-      case 'checkBox':
-        return <input type="checkbox"/>
+      case 'checkbox':
+        return <FinalCheckBox
+          {...input}
+          value={checked}
+        />;
 
       case 'textAreaField':
         return <textarea name="" id="" cols="30" rows="10" />
+
+      case 'phoneField':
+        return <input type="text"/>
 
       default:
 
@@ -39,21 +49,15 @@ const FinalField = ({mainProps}) => {
   };
 
   const generateError = () => {
-    return (touched && error) ? <span>{error}</span> : null;
-  };
-
-  const fieldLabel = (label && <Label>{label}</Label>)
-
-  const generateLabel = () => {
-    return label ? <Label>{label}</Label>: null;
+    return (touched && error) ? <Error>{error}</Error> : null;
   };
 
   return (
-    <FinalFieldContainer>
+    <>
       {generateLabel()}
       {generateFinalField()}
       {generateError()}
-    </FinalFieldContainer>
+    </>
   )
 };
 
